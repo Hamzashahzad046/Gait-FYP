@@ -13,6 +13,7 @@ import AnalysisPage from './pages/AnalysisPage';
 import ProfilePage from './pages/ProfilePage';
 import HistoryPage from './pages/HistoryPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 const AuthLoadingScreen = () => (
   <div style={{
     display: 'flex',
@@ -65,6 +66,10 @@ const AppRoutes = () => {
         path="/forgot-password"
         element={isAuthenticated ? <Navigate to="/dashboard" /> : <ForgotPasswordPage />}
       />
+      <Route
+        path="/reset-password"
+        element={<ResetPasswordPage />}
+/>
 
       {}
       <Route
