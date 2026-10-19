@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Send request to backend
         run: |
-          # Replace with your actual Render backend URL and health route
           RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" https://gait-fyp.onrender.com/)
+          echo "Pinged Render backend. Status code: $RESPONSE"
